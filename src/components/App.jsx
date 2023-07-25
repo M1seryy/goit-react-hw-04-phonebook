@@ -39,10 +39,9 @@ function App() {
     contacts.map(item => {
       if (item.name === obj.name) {
         alert(`${obj.name} is already in contact list`);
-
-        setContacts(prev => {
-          prev.filter(contact => contact.name !== obj.name);
-        });
+        setContacts(
+          contacts.filter(contact => contact.name !== obj.name)
+        );
       }
       return item.name;
     });
